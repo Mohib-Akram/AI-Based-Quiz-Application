@@ -1,0 +1,1 @@
+{"sessionId": "debug-session", "runId": "run1", "hypothesisId": "H2", "location": "main.py:3", "message": "Import router failed", "data": {"error": "No module named 'langchain_openai'", "type": "ModuleNotFoundError"}, "timestamp": 1766923448112}
