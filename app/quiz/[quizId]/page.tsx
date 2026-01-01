@@ -123,7 +123,7 @@ const handleViolation = (type: string) => {
     setIsSubmitting(true)
 
     try {
-      // ✅ Stop webcam before submitting
+      // ✅ Stop webcam immediately when submit is clicked
       webcamRef.current?.stopMonitoring()
 
       let score = 0
@@ -141,7 +141,6 @@ const handleViolation = (type: string) => {
         }
       })
 
-
       // Create a temporary ID for the results page to navigate to.
       // The results page will then listen for the actual document.
       const tempResultId = `temp_${user.uid}_${Date.now()}`;
@@ -149,7 +148,7 @@ const handleViolation = (type: string) => {
       router.push(`/result/${tempResultId}`);
 
       // Save the data in the background.
-      addDoc(collection(db, "results"), {
+      await addDoc(collection(db, "results"), {
         userId: user?.uid,
         name: userName || "Unknown",
         email: user?.email || "Unknown",
@@ -167,9 +166,6 @@ const handleViolation = (type: string) => {
       });
 
       sessionStorage.removeItem("currentQuiz");
-      
-
-
 
     } catch (error) {
       console.error("Error submitting quiz:", error)
@@ -180,6 +176,8 @@ const handleViolation = (type: string) => {
       })
     } finally {
       setIsSubmitting(false)
+      // ✅ Ensure webcam is stopped even if there's an error
+      webcamRef.current?.stopMonitoring()
     }
   }
 

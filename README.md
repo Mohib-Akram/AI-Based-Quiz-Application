@@ -12,13 +12,6 @@ A comprehensive AI-powered quiz application with real-time monitoring, RAG-based
 - **Leaderboard System**: Competitive scoring with filtering by topic and difficulty
 - **Responsive Design**: Mobile-first design with Tailwind CSS
 
-### Advanced Features
-- **Document Processing**: PDF parsing with semantic chunking and embedding generation
-- **Vector Database**: FAISS-based similarity search for relevant content retrieval
-- **Security Monitoring**: Tab switching, fullscreen exit, and multi-person detection
-- **Smart Violation System**: Configurable thresholds with automatic camera shutdown
-- **Real-time Updates**: Firebase integration for live data synchronization
-
 ## 🏗️ Project Structure
 
 ```
@@ -164,20 +157,15 @@ BACKEND_API_KEY=your_backend_api_key
 - Configurable violation thresholds (default: 5 violations)
 - Automatic camera shutdown on threshold breach
 
-### 3. User Management
-- Firebase Authentication integration
-- Role-based access control (User/Admin)
-- Secure session management
-- Profile management with name and email
 
-### 4. Quiz Interface
+### 3. Quiz Interface
 - Responsive question display with radio buttons
 - Real-time progress tracking
 - Question navigation with numbered buttons
 - Timer functionality with visual indicators
 - Violation tracking with visual alerts
 
-### 5. Results & Analytics
+### 4. Results & Analytics
 - Detailed quiz results with explanations
 - Performance metrics and scoring
 - Historical results tracking
@@ -267,28 +255,3 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 - Efficient document processing
 - Batch API requests
 - Memory management for large documents
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🆘 Support
-
-For support and questions:
-- Check the documentation
-- Review the code comments
-- Create an issue with detailed information
-
----
-
-**Built with ❤️ using Next.js, FastAPI, Firebase, and Google AI**
-#   A I - B a s e d - Q u i z - A p p l i c a t i o n  
- 
