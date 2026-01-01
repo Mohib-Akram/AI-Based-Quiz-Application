@@ -242,16 +242,14 @@ pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-## 📈 Performance Considerations
 
-### Frontend Optimizations
-- Component lazy loading
-- Image optimization with Next.js
-- Responsive design for all devices
-- Efficient state management
+## ⭐ Final Note
 
-### Backend Optimizations
-- Vector database caching
-- Efficient document processing
-- Batch API requests
-- Memory management for large documents
+This **AI Quiz Application** demonstrates the practical integration of **AI, real-time monitoring, modern web technologies, and backend intelligence** in a single full-stack system.
+
+It is well-suited for:
+- Semester and final-year projects  
+- Research and academic demonstrations  
+- Real-world AI-based assessment platforms  
+
+If you find this project helpful, consider giving it a and sharing your feedback!
