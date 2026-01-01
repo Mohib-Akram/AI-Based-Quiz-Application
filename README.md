@@ -154,7 +154,7 @@ BACKEND_API_KEY=your_backend_api_key
 - Webcam-based face detection using TensorFlow.js
 - Multi-person detection alerts
 - Tab switching and fullscreen exit monitoring
-- Configurable violation thresholds (default: 5 violations)
+- Configurable violation thresholds (default: 3 violations)
 - Automatic camera shutdown on threshold breach
 
 
@@ -199,14 +199,7 @@ BACKEND_API_KEY=your_backend_api_key
 - `/api/generate-quiz/` - Quiz generation proxy
 - Authentication middleware for protected routes
 
-## 🎯 Usage Flow
 
-1. **Authentication**: Users sign up/login with Firebase Auth
-2. **Document Upload**: Upload PDF for quiz generation
-3. **Quiz Configuration**: Set topic, difficulty, and question count
-4. **Quiz Taking**: Real-time proctoring with webcam monitoring
-5. **Results**: View detailed performance and explanations
-6. **Leaderboard**: Compare scores with other users
 
 ## 🔧 Configuration
 
@@ -221,26 +214,6 @@ BACKEND_API_KEY=your_backend_api_key
 - **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2
 - **AI Model**: Google Gemini 2.5 Flash
 - **Question Types**: Multiple choice with explanations
-
-## 🚀 Deployment
-
-### Frontend (Next.js)
-```bash
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
-
-### Backend (FastAPI)
-```bash
-# Install production dependencies
-pip install -r requirements.txt
-
-# Run with production server
-uvicorn main:app --host 0.0.0.0 --port 8000
-```
 
 
 ## ⭐ Final Note
