@@ -6,8 +6,6 @@ A comprehensive AI-powered quiz application with real-time monitoring, RAG-based
 
 ### Landing Page
 ![Landing Page](screenshots/landing1.png)
-
-### Landing Page 2
 ![Landing Page 2](screenshots/landing2.png)
 
 ### Dashboard
