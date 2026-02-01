@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import {
   Brain,
   ShieldCheck,
@@ -10,10 +11,14 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Menu,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen overflow-hidden text-gray-900">
       {/* Background */}
@@ -33,8 +38,9 @@ export default function HomePage() {
               <span className="text-2xl font-bold">AI Quiz Pro</span>
             </div>
 
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
-              {["Start Quiz", "Quiz Results", "Leaderboard", "About"].map(
+              {["Start Quiz", "Result", "Leaderboard", "About"].map(
                 (item, i) => (
                   <Link
                     key={i}
@@ -51,13 +57,59 @@ export default function HomePage() {
               )}
             </nav>
 
-            <Button
-              asChild
-              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 shadow"
+            {/* Desktop Login Button */}
+            <div className="hidden md:block">
+              <Button
+                asChild
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 shadow"
+              >
+                <Link href="/login">Login</Link>
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Link href="/login">Login</Link>
-            </Button>
+              {isMenuOpen ? (
+                <X className="h-6 w-6 text-gray-700" />
+              ) : (
+                <Menu className="h-6 w-6 text-gray-700" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200">
+              <div className="max-w-7xl mx-auto px-6 py-4 space-y-3">
+                {["Start Quiz", "Result", "Leaderboard", "About"].map(
+                  (item, i) => (
+                    <Link
+                      key={i}
+                      href={
+                        item === "Start Quiz"
+                          ? "/quiz/start"
+                          : `/${item.toLowerCase().replace(" ", "")}`
+                      }
+                      className="block py-2 text-gray-700 font-medium hover:text-blue-600 transition"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item}
+                    </Link>
+                  )
+                )}
+                <Link
+                  href="/login"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block py-2 text-gray-700 font-medium hover:text-blue-600 transition"
+                >
+                  Login
+                </Link>
+              </div>
+            </div>
+          )}
         </header>
 
         {/* Hero */}
