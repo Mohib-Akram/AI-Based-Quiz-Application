@@ -2,6 +2,29 @@
 
 A comprehensive AI-powered quiz application with real-time monitoring, RAG-based document processing, and intelligent quiz generation.
 
+## 📸 Application Preview
+
+### Landing Page
+![Landing Page](screenshots/landing1.png)
+
+### Landing Page 2
+![Landing Page 2](screenshots/landing2.png)
+
+### Dashboard
+![Dashboard](screenshots/quiz-page.png)
+
+### Quiz Starting Page
+![Quiz Starting](screenshots/quiz-starting.png)
+
+### Quiz Interface
+![Quiz Interface](screenshots/quiz-doing.png)
+
+### Quiz Results
+![Quiz Results](screenshots/result.png)
+
+### Leaderboard
+![Leaderboard](screenshots/leaderboard.png)
+
 ## 🚀 Features
 
 ### Core Functionality
@@ -16,20 +39,14 @@ A comprehensive AI-powered quiz application with real-time monitoring, RAG-based
 
 ```
 ai-quiz-app-final/
-├── app/                          # Next.js App Router
+├── app/                         
 │   ├── admin/                     # Admin dashboard
 │   ├── api/                       # API routes
-│   │   └── generate-quiz/         # Quiz generation endpoint
-│   ├── chat/                      # Chat interface
 │   ├── dashboard/                  # User dashboard
 │   ├── leaderboard/                # Leaderboard with filters
 │   ├── login/                     # Authentication
-│   ├── quiz/                      # Quiz interface
-│   │   ├── [quizId]/             # Dynamic quiz pages
-│   │   └── start/                # Quiz start page
-│   ├── result/                    # Results display
-│   │   ├── [resultId]/            # Individual results
-│   │   └── page.tsx              # All results list
+│   ├── quiz/                      # Quiz interface 
+│   ├── result/                    # Results display 
 │   ├── signup/                    # User registration
 │   ├── globals.css                # Global styles
 │   ├── layout.tsx                # Root layout
@@ -41,22 +58,8 @@ ai-quiz-app-final/
 │   ├── security.py               # Authentication middleware
 │   └── requirements.txt          # Python dependencies
 ├── components/                   # Reusable React components
-│   ├── ui/                      # UI component library
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── badge.tsx
-│   │   ├── progress.tsx
-│   │   ├── select.tsx
-│   │   └── ... (more UI components)
-│   └── webcam-monitor.tsx         # Proctoring component
-├── contexts/                    # React contexts
-│   └── AuthContext.tsx          # Authentication state
-├── hooks/                       # Custom React hooks
-│   └── use-toast.ts             # Toast notifications
-├── lib/                         # Utility libraries
-│   └── firebase.ts              # Firebase configuration
-├── styles/                      # Styling
-│   └── globals.css              # Global styles
+│   ├── ui/                      # UI component library   │   
+│   └── webcam-monitor.tsx         # Proctoring component 
 ├── public/                      # Static assets
 ├── .env                         # Environment variables
 ├── package.json                 # Node.js dependencies
@@ -68,9 +71,7 @@ ai-quiz-app-final/
 
 ### Frontend
 - **Framework**: Next.js 15.2.4 with App Router
-- **Language**: TypeScript
 - **Styling**: Tailwind CSS with Radix UI components
-- **State Management**: React Context API
 - **Authentication**: Firebase Auth
 - **Database**: Firestore
 - **AI Integration**: Google Generative AI (Gemini)
@@ -78,11 +79,10 @@ ai-quiz-app-final/
 
 ### Backend
 - **Framework**: FastAPI (Python)
-- **AI/ML**: LangChain with Google Gemini
+- **AI**: LangChain with Google Gemini
 - **Document Processing**: PyPDF, Sentence Transformers
 - **Vector Database**: FAISS
 - **Embeddings**: HuggingFace Sentence Transformers
-- **API Documentation**: Automatic OpenAPI/Swagger
 
 ### Infrastructure
 - **Database**: Firebase Firestore
@@ -172,48 +172,11 @@ BACKEND_API_KEY=your_backend_api_key
 - Leaderboard with filtering (topic, difficulty)
 - Comparative analysis with averages
 
-## 🔐 Security Features
+## 👥 Team Members
 
-### Proctoring System
-- **Face Detection**: Continuous monitoring using BlazeFace
-- **Multi-Person Alert**: Detects additional people in frame
-- **No-Face Detection**: Alerts when user leaves camera view
-- **Tab Switching**: Monitors browser tab changes
-- **Fullscreen Monitoring**: Detects fullscreen exit attempts
-
-### Violation Scoring
-- Multiple People Detected: 10 points
-- Tab Switch: 10 points
-- Fullscreen Exit: 10 points
-- No Face Detected: 10 points
-- Camera auto-shutdown at 5 violations
-
-## 📊 API Endpoints
-
-### Backend FastAPI Endpoints
-- `POST /upload/` - Upload and process PDF documents
-- `POST /generate-quiz/` - Generate quizzes from processed documents
-- `GET /` - Health check endpoint
-
-### Frontend API Routes
-- `/api/generate-quiz/` - Quiz generation proxy
-- Authentication middleware for protected routes
-
-
-
-## 🔧 Configuration
-
-### Webcam Monitoring
-- **Violation Threshold**: Configurable (default: 5 violations)
-- **Detection Sensitivity**: Adjustable face detection parameters
-- **Camera Resolution**: Responsive sizing (max 240px height)
-- **Monitoring Frequency**: Real-time detection loop
-
-### Quiz Generation
-- **Chunk Size**: 1000 characters with 100 character overlap
-- **Embedding Model**: sentence-transformers/all-MiniLM-L6-v2
-- **AI Model**: Google Gemini 2.5 Flash
-- **Question Types**: Multiple choice with explanations
+- **Muhammad Danish**   
+- **Mohib Akram** 
+- **Taha Haider** 
 
 
 ## ⭐ Final Note
